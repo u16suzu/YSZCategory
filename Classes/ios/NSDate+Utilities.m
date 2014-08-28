@@ -33,4 +33,27 @@
     return NO;
 }
 
+- (NSString*)stringDateGMT9{
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSDateComponents *comps = [calendar components:(NSYearCalendarUnit    | NSMonthCalendarUnit | NSDayCalendarUnit |
+                                                    NSWeekdayCalendarUnit |  NSHourCalendarUnit | NSMinuteCalendarUnit |
+                                                    NSSecondCalendarUnit  )
+                                          fromDate:self];
+    
+    NSInteger month = [comps month];
+    NSInteger day = [comps day];
+    NSInteger weekday = [comps weekday];
+    NSInteger h = [comps hour];
+    NSInteger m = [comps minute];
+    NSInteger s = [comps second];
+    
+    NSDateFormatter *df = [NSDateFormatter new];
+    df.locale =[[NSLocale alloc] initWithLocaleIdentifier:@"ja_JP"];
+    NSString *weekdaySymbol = [[df shortWeekdaySymbols] objectAtIndex:weekday - 1];
+    NSString *weekdayString = [NSString stringWithFormat:@"(%@)", weekdaySymbol];
+    
+    return [NSString stringWithFormat:@"%d/%d/%@ %d:%d:%d",
+            month, day, weekdayString, h, m, s];
+}
+
 @end
