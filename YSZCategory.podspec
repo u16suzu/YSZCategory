@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "YSZCategory"
-  s.version      = "0.0.1"
+  s.version      = "0.0.3"
   s.summary      = "Categories."
 
   s.description  = <<-DESC
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
   s.author             = { "u16suzu" => "u16suzu@gmail.com" }
   s.social_media_url   = "http://twitter.com/u16suzu"
 
-  s.source       = { :git => "https://github.com/u16suzu/YSZCategory.git", :tag => "0.0.1" }
+  s.source       = { :git => "https://github.com/u16suzu/YSZCategory.git", :tag => "0.0.3" }
   s.source_files  = "Classes", "Classes/**/*.{h,m}"
 
 end
