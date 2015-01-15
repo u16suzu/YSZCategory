@@ -6,7 +6,7 @@ YSZCategory
 Write to podfile
 
 ```
-pod 'YSZCategory', git: 'https://github.com/u16suzu/YSZCategory.git'
+pod 'YSZCategory', git: 'https://github.com/u16suzu/YSZCategory.git', tag: '0.0.4'
 ```
 
 Run the command
