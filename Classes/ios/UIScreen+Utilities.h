@@ -10,5 +10,6 @@
 +(float)width;
 
 + (BOOL)is4inch;
++ (BOOL)is35inch;
 
 @end
