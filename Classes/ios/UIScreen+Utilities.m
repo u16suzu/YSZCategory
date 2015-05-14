@@ -25,8 +25,8 @@
 }
 
 + (BOOL)is35inch{
-    CGSize screenSize = [[UIScreen mainScreen] bounds].size;
-    return screenSize.width == 320 && screenSize.height == 480.0;
+    CGSize screenSize = [[self mainScreen] bounds].size;
+    return screenSize.width == 320.0 && screenSize.height == 480.0;
 }
 
 @end
